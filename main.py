@@ -9,6 +9,7 @@ import eel
 import threading
 import json
 import os
+import apiai
 
 from pyowm import OWM
 from pyowm.utils.config import get_default_config
@@ -56,6 +57,11 @@ def talk(text):
 	engine.endLoop()
 
 def tap(text):
+	query = query.replace("запятая", ",")
+	query = query.replace("восклицательный знак", "!")
+	query = query.replace("знак вопроса", "?")
+	query = query.replace("точка", ".")
+	query = query.replace("кавычка", '"')
 	keyboard.write(text)
 
 def hot(combination):
@@ -77,6 +83,7 @@ def link(href):
 		print(repr(e))
 		print(e)
 		print(dir(e))
+
 
 def handler(query):
 	if config['owm_state'] != None:
@@ -130,6 +137,24 @@ def handler(query):
 
 	elif config['dictation'] == True:
 		tap(query)
+	else:
+		request = apiai.ApiAI('7f01246612e64e3f89264a85a965ddd3').text_request()
+		# На каком языке будет послан запрос
+		request.lang = 'ru'
+		# ID Сессии диалога (нужно, чтобы потом учить бота)
+		request.session_id = '3301megabot'
+		# Посылаем запрос к ИИ с сообщением от юзера
+		request.query = query
+		responseJson = json.loads(request.getresponse().read().decode('utf-8'))
+		# Разбираем JSON и вытаскиваем ответ
+		response = ''
+		response = responseJson['result']['fulfillment']['speech'] 
+		# Если есть ответ от бота - выдаём его,
+		# если нет - бот его не понял
+		if response:
+			talk(response)
+		else:
+			talk(config['phrases']['dont_understand'])
 
 def assistant_main():
 	eel.add_to_log(config['states']['started'])
