@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href=".\css\styles.css">
+	<script src="eel.js"></script>
+	<title>Настройки</title>
+</head>
+<body>
+	<div class="main-page">
+		<div class="title">
+			<h1 class="settings-title">Настройки</h1>
+		</div><br>
+		<div class="settings-panel">
+			<ul class="settings-list">
+				<li class="settings-appeal">
+					<label class="appeal-text">Обрабатывать команды только при обращении к ассистенту: </label>
+					<label class="appeal-label"><input class="appeal-radio-true" type="radio" name="appeal-radio">Да</label>
+					<label class="appeal-label"><input class="appeal-radio-false" type="radio" name="appeal-radio">Нет</label>
+				</li>
+				<li class="settings-assistant-name">
+					<label class="assistant-name-text">Имя для голосового помощника: </label>
+					<input type="text" class="assistant-name-input">
+				</li>
+				<li class="settings-device-index">
+					<label class="device-index-text">Устройства для прослушивания команд: </label>
+					<select class="devices select"></select>
+				</li>
+				<li class="settings-assistant-voice">
+					<label class="assistant-voice">Выберите голос для вашео ассистента: </label>
+					<select class="voices select"></select>
+				</li>
+			</ul><br>
+			<div class="buttons">
+				<div class="accept-button-container">
+					<button class="btn" id="accept-button">Принять</button>
+				</div>
+				<div class="cancel-button-container">
+					<button class="btn" id="cancel-button">Отмена</button>
+				</div>
+			</div>
+		</div>
+		<div class="commands-panel">
+			<div class="commands-title-container">
+				<h1 class="commands-title">Добавить команду</h1>
+			</div>
+			<div class="main-commands-panel">
+				<div class="command-panel">
+					<label class="command-type">Выберите тип команды<br>
+						<select class="command-type-select">
+							<option class="command-type-option">Нажатие</option>
+							<option class="command-type-option">Сочетание клавиш</option>
+							<option class="command-type-option">Запуск программы</option>
+							<option class="command-type-option">Открыть ссылку</option>
+						</select>
+					</label>
+					<label class="command-phrase">Фраза для срабатывания команды<br>
+						<input type="text" class="command-phrase-input" placeholder="Введите фразу">
+					</label>
+					<label class="command-action">Введите действие для команды<br>
+						<input type="text" class="command-action-input" placeholder="Введите действие">
+					</label>
+				</div>
+				<div class="commands-buttons">
+					<div class="add-command-button-container">
+						<button class="btn" id="add-command-button">Добавить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="user-commands-container">
+			<div class="user-commands-title-container">
+				<h1 class="user-commands-title">Ваши команды</h1>
+				<label class="user-commands-title-type">Тип команды</label>
+				<label class="user-commands-title-phrase">Фраза срабатывания</label>
+				<label class="user-commands-title-action">Действие</label>
+			</div>
+			<ol class="user-commands-list">
+			</ol>
+		</div>
+	</div>
+	<script type="text/javascript" src=".\js\settings.js"></script>
+</body>
+</html>

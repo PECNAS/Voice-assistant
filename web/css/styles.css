@@ -1,0 +1,228 @@
+body {
+	background: #396afc;
+	background: -webkit-linear-gradient(to right, #2948ff, #796afc);
+	background: linear-gradient(to right, #2948ff, #796afc);
+
+
+
+ 	/*background: #bdc3c7;  /* fallback for old browsers
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  Chrome 10-25, Safari 5.1-6
+	background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: rgb(240, 240, 240);
+	font-size: 110%;
+	overflow: scroll;
+
+}
+
+.main-page {
+	height: 97%;
+	width: 98%
+}
+
+.log-title {
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+.settings-title {
+	font-size: 190%;
+	margin-left: 5%;
+	margin-top: 3%;
+}
+
+.commands-title {
+	margin-top: 10%;
+	font-size: 190%;
+	margin-left: 5%;
+}
+
+.user-commands-title {
+	font-size: 190%;
+	margin-left: 5%;
+	margin-top: 3%;
+}
+
+.log-container {
+	min-width: 69%;
+	max-width: 69%;
+	float: left;
+	height: 100%;
+}
+
+.log-list {
+	list-style-type: none;
+}
+
+.log-element {
+	font-weight: 100;
+}
+
+.control-panel {
+	min-width: 30%;
+	float: right;
+}
+
+.start {
+	width: 98%;
+	margin: 5%;
+}
+
+#start-button {
+	color: white;
+	width: 100%;
+	background: #CE11D0;
+	border: 1px solid #CE11D0;
+}
+
+.finish {
+	width: 98%;
+	margin: 5%;
+}
+
+#finish-button {
+	width: 100%;
+	color: black;
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+}
+
+.settings {
+	width: 98%;
+	margin: 5%;
+}
+
+#settings-button {
+	width: 100%;
+	background: rgba(41, 72, 255, .5);
+	border-radius: 4px;
+	border: 1px solid rgba(41, 72, 255, .5);
+}
+
+.appeal-label {
+	margin-right: 1%;
+}
+
+input {
+	border-radius: 10px;
+	border: 0px solid black;
+}
+
+li {
+	margin-bottom: 2%;
+}
+
+.select {
+	border: 0px solid black;
+	border-radius: 4px;
+}
+
+.accept-button-container {
+	float: left;
+}
+
+.cancel-button-container {
+	margin-right: 80%;
+	float: right;
+}
+
+.accept-button-container {
+	margin-left: 1.5%;
+}
+
+#accept-button {
+	margin: 3%;
+	color: black;
+	background: #ABCDEF;
+	border: 1px solid #ABCDEF;
+}
+
+.cancel-button-container {
+	margin-left: 1.5%;
+}
+
+#cancel-button {
+	margin: 3%;
+	color: black;
+	background: #CE11D0;
+	border: 1px solid #CE11D0;
+}
+
+.main-commands-panel {
+	margin-left: 3%;
+}
+
+.command-type {
+}
+
+.command-type-select {
+	border: 0px solid black;
+	border-radius: 4px;
+	margin-left: 1%;
+	margin-top: 2%;
+}
+
+.command-phrase {
+	margin-left: 5%;
+}
+
+.command-phrase-input {
+	margin-top: 2%;
+	width: 100%;
+}
+
+.command-action {
+	margin-left: 5%;
+}
+
+.command-action-input {
+	margin-top: 2%;
+	width: 115%;
+}
+
+.add-command-button-container {
+	margin-left: -1%;
+	margin-top: 4%;
+}
+
+#add-command-button {
+	background: #ABCDEF;
+	border: 1px solid #ABCDEF;
+}
+
+.user-commands-container {
+	margin-top: 2%;
+}
+
+.user-command-type {
+	width: 30%;
+}
+
+.user-command-phrase {
+	width: 30%;
+}
+
+.user-command-action {
+	width: 30%;
+}
+
+.user-commands-title-type {
+	margin-left: 2%;
+	font-size: 130%;
+	width: 30%;
+}
+
+.user-commands-title-phrase {
+	margin-left: -1%;
+	font-size: 130%;
+	width: 30%;
+}
+
+.user-commands-title-action {
+	margin-left: -1%;
+	font-size: 130%;
+	width: 30%;
+}
+.user-command-button-delete {
+	background: #CE11D0;
+	border: 1px solid #CE11D0;
+}
